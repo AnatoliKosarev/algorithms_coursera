@@ -24,4 +24,4 @@ def karatsuba(x, y):
     return 10**(2*n2) * res1 + 10**n2 * (res3 - res1 - res2) + res2
 
 
-print(karatsuba(5678, 1234))
+print(karatsuba(56789, 1234))
