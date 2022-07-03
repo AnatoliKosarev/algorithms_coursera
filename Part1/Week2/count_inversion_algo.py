@@ -39,6 +39,19 @@ def count_inversion_algo(list_to_sort):
     return {'sorted_list': sorted_list, 'inv_count': inv_count}
 
 
-test = [6, 5, 4, 3, 2, 1]
-result = count_inversion_algo(test)
+# test = [3, 5, 1, 4, 6, 2]
+# result = count_inversion_algo(test)
+
+
+result = 0
+list_to_sort = []
+
+with open('/home/kosarau/Desktop/test_inv_algo.txt') as file:
+    for line in file:
+        line = line.strip()
+        if line.isdigit():
+            list_to_sort.append(int(line))
+
+result = count_inversion_algo(list_to_sort)
+
 print(f'Number of inversions: {result.get("inv_count", False)}\nSorted list: {result.get("sorted_list", False)}')
